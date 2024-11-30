@@ -21,8 +21,8 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    justify-content: center; 
-    border-radius: 20px;  
+    justify-content: center;
+    border-radius: 20px;
 }
 
 
@@ -42,23 +42,23 @@
     font-size: 12px;
     border-radius: 10px;
     padding: 10px 15px 10px 15px;
-  }
+}
 
-  .box1:hover .tooltip_text {
+.box1:hover .tooltip_text {
     visibility: visible;
-  }
+}
 
-  .box1:hover img{
+.box1:hover img {
     backdrop-filter: blur(10px);
-  }
+}
 
 
-  .tooltip_text {
-    top: 20%; 
+.tooltip_text {
+    top: 20%;
     left: 40%;
-  }
-  
-  
+}
+
+
 .box1 img {
     align-self: center;
     border-radius: 20px;
@@ -73,7 +73,7 @@
     margin: 30px;
 }
 
-.buttons p:nth-child(1) {   
+.buttons p:nth-child(1) {
     padding: 10px 0;
     font-size: 1.2rem;
 }
@@ -98,7 +98,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items:end;
+    align-items: end;
 }
 
 
@@ -118,16 +118,138 @@
     color: #fbfbfb;
     display: flex;
     flex-wrap: wrap;
-    align-items: center ;
+    align-items: center;
     justify-content: space-around;
 }
 
+
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100px;
+}
+
+.filterInnerContainer {
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding-left: 30px;
+    height: 100%
+}
+
+.verticalbar {
+    border: solid;
+    border-width: 1px;
+    border-color: #51515137;
+    margin-top: 17px;;
+    height: 65%;
+}
+
+
+/* Column styling */
 .column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Date picker wrapper */
+.datePickerWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Custom icon for DatePicker */
+.icon {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Date Display */
+.dateDisplay {
+    margin-top: 5px;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Custom Input Button for DatePicker */
+.customInput {
+    background: #f7f7f7;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+}
+
+.customInput:hover {
+    background-color: #e0e0e0;
+}
+
+/* Remove border from the select element */
+select {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+}
+
+/* Ensure vertical alignment */
+.filterInnerContainer {
+    flex-direction: row;
     gap: 20px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 600px) {
+    .filterInnerContainer {
+        flex-direction: column;
+    }
+}
+
+.searchButton {
+    display: flex;
+    background-color: rgb(0, 45, 34);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 15px;
+    gap: 10px;
+
+}
+.typeCont{
+    display: flex;
+    border: 1px solid #ccc;  /* Add custom border */
+  
+    width:110px;
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 14px;  /* Adjust font size */
+    cursor: pointer;
+    align-items: center;  /* Align items in the center */
+    gap: 2px; 
+    margin-top: 15px;
+}
+.typeCont select{
+    display: flex;
+    border: 1px solid #ccc;  /* Add custom border */
+    background-color: transparent;
+
 }
 
 
@@ -142,7 +264,7 @@
     width: 300px;
 }
 
-.row input{
+.row input {
     padding: 10px;
     outline: none;
 }
@@ -150,13 +272,15 @@
 .row input:focus {
     outline: 2px solid rgb(2, 59, 53);
 }
+
 @media (max-width:1000px) {
-    .grid{
+    .grid {
         grid-template-columns: auto auto;
     }
 }
+
 @media (max-width:700px) {
-    .grid{
+    .grid {
         grid-template-columns: auto;
     }
 }

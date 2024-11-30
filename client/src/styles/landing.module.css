@@ -1,4 +1,4 @@
-
+/* 
 .container {
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
@@ -81,4 +81,53 @@ video {
         background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     }
     
-}
+} */
+.container {
+    display: flex;
+
+    justify-content: center;
+    height:100vh;
+  }
+  
+  .blueCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for title and image */
+    margin-top: 15px;
+    justify-content: space-between;
+    background-color: rgba(117, 198, 255, 0.331);
+    height: 400px;
+    width: 75%;
+    border-radius: 40px;
+    overflow: hidden; /* Ensure child elements don't overflow */
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 50px; */
+    justify-content: center;
+    padding-left: 40px;
+  }
+  .title {
+    width:70%;
+    flex-wrap: wrap;
+    font-size: 47px;
+    display: flex;
+    gap:5px;
+    font-weight: bold;
+  }
+  .tagline{
+    width: 70%;
+    font-size: 15px;
+    color: rgb(145, 145, 145);
+
+  }
+  .image {
+    position: relative;
+    width: 800px;
+    height:400px;
+    max-width: 100%; /* Ensure image width doesn't exceed container */
+    max-height: 100%; /* Ensure image height doesn't exceed container */
+    object-fit: contain; /* Scale the image to fit without distortion */
+    margin-left:120px;
+  }
+  
