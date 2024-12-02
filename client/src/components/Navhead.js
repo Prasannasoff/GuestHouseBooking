@@ -17,7 +17,7 @@ function Navhead() {
             KEC GUEST HOUSE
           </a>
           <div className="navbar-links">
-            <a className="nav-link" href="/home">Home</a>
+            <a className="nav-link" href="/">Home</a>
             <a className="nav-link" href="/features">Features</a>
             <a className="nav-link" href="/feedback">Feedback</a>
             <a className="nav-link" href="/contact">Contact Us</a>

@@ -1,6 +1,7 @@
 .container {
     border: 0px;
     padding: 10;
+
 }
 
 .grid {
@@ -128,23 +129,32 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    background-color: transparent;
     height: 100px;
 }
 
 .filterInnerContainer {
     display: flex;
-    gap: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
+    justify-content: space-between;
+    background-color: none;
     padding-left: 30px;
-    height: 100%
+    height: 110px;
+    background-color: white;
+    /* Background for clarity */
+    position: relative;
+    width: 800px;
+    border-radius: 10px;
+    /* Rounded corners for aesthetic */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .verticalbar {
     border: solid;
     border-width: 1px;
     border-color: #51515137;
-    margin-top: 17px;;
+    margin-top: 17px;
+    ;
     height: 65%;
 }
 
@@ -154,7 +164,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px
 }
 
 /* Date picker wrapper */
@@ -164,40 +175,28 @@
     flex-direction: column;
     padding: 0px 20px;
     align-items: center;
-    margin-top: 20px;
+    z-index: 1000;
+    justify-content: center;
+
 }
 
 /* Custom icon for DatePicker */
 .icon {
     font-size: 18px;
     margin-bottom: 5px;
+    color: rgb(250, 197, 39)
 }
 
 /* Date Display */
 .dateDisplay {
     margin-top: 5px;
     color: #000;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: bold;
     text-align: center;
 }
 
-/* Custom Input Button for DatePicker */
-.customInput {
-    background: #f7f7f7;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
 
-.customInput:hover {
-    background-color: #e0e0e0;
-}
 
 /* Remove border from the select element */
 select {
@@ -226,33 +225,39 @@ select {
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 5px 15px;
+    padding: 5px 30px;
     cursor: pointer;
     border-radius: 0px 10px 10px 0px;
     font-size: 15px;
     gap: 10px;
 
 }
-.typeCont{
+
+
+
+.typeCont {
     display: flex;
-    border: 1px solid #ccc;  /* Add custom border */
-  
-    width:110px;
-    border-radius: 5px;  /* Rounded corners */
-    font-size: 14px;  /* Adjust font size */
+    border: 1px solid #ccc;
+    /* Add custom border */
+    width: 110px;
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Adjust font size */
     cursor: pointer;
-    align-items: center;  /* Align items in the center */
-    gap: 2px; 
-    margin-top: 15px;
+    align-items: center;
+    /* Align items in the center */
+    gap: 2px;
+ 
 }
-.typeCont select{
+
+.typeCont select {
     display: flex;
-    border: 1px solid #ccc;  /* Add custom border */
+    border: 1px solid #ccc;
+    /* Add custom border */
     background-color: transparent;
 
 }
-
-
 
 .column p {
     text-align: center;

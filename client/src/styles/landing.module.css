@@ -98,7 +98,7 @@ video {
     height: 400px;
     width: 75%;
     border-radius: 40px;
-    overflow: hidden; /* Ensure child elements don't overflow */
+    position: relative;
   }
   .header{
     display: flex;
@@ -130,4 +130,13 @@ video {
     object-fit: contain; /* Scale the image to fit without distortion */
     margin-left:120px;
   }
+  .homePage {
+    position: absolute;
+    top: 85%; /* Move it below the blueCont, overlapping by 15% */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+
+    background-color: none;
   
+   
+}

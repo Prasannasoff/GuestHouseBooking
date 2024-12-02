@@ -22,6 +22,7 @@ function HomeScreen() {
     const [searchkey, setsearchkey] = useState()
     const user = JSON.parse(localStorage.getItem('currentuser'));
     const [types, settypes] = useState("all")
+    const [search, setSearch] = useState(false);
 
 
     useEffect(() => {
@@ -79,6 +80,7 @@ function HomeScreen() {
 
         // Set the filtered rooms
         setRooms(filteredRooms);
+        setSearch(true)
     };
 
     // function filterByDate(dates, dateStrings) {
@@ -179,11 +181,12 @@ function HomeScreen() {
                                 customInput={
                                     <div style={{ display: 'flex', cursor: 'pointer', gap: '5px' }}>
                                         <FontAwesomeIcon icon={faCalendarAlt} className={style.icon} />
-                                        <div>Check in</div>
+                                        <div style={{ color: 'grey', fontSize: '14px' }}>Check in</div>
                                     </div>}
+
                             />
                             <div className={style.dateDisplay}>
-                            {fromdate ? moment(fromdate).format('DD MMM YYYY') : ''}
+                                {fromdate ? moment(fromdate).format('DD MMM YYYY') : ''}
 
                             </div>
                         </div>
@@ -200,7 +203,7 @@ function HomeScreen() {
                                 className={style.datePicker}
                                 customInput={<div style={{ display: 'flex', cursor: 'pointer', gap: '5px' }}>
                                     <FontAwesomeIcon icon={faCalendarAlt} className={style.icon} />
-                                    <div>Check Out</div>
+                                    <div style={{ color: 'grey', fontSize: '14px' }}>Check Out</div>
                                 </div>}
                             />
                             <div className={style.dateDisplay}>
@@ -211,7 +214,6 @@ function HomeScreen() {
                     <div className={style.verticalbar}></div>
 
                     <div className={style.column}>
-                      
                         <div className={style.typeCont}>
                             <select value={types} onChange={(e) => settypes(e.target.value)}>
                                 <option value="all">All</option>
@@ -225,16 +227,15 @@ function HomeScreen() {
                         className={style.searchButton}
                         onClick={filter}
                     >
-                        <FontAwesomeIcon icon={faSearch} className={style.icon} />
+                        <FontAwesomeIcon icon={faSearch} style={{ fontSize: '18px', marginBottom: '5px' }} />
                         Search
                     </div>
                 </div>
             </div>
-            <hr />
 
 
 
-            <div className={style.grid}>
+            {search && <div className={style.grid}>
                 {loading ? (
                     <h1><Loader /></h1>
                 ) : (
@@ -244,7 +245,7 @@ function HomeScreen() {
                         </div>
                     ))
                 )}
-            </div>
+            </div>}
         </div>
     );
 }

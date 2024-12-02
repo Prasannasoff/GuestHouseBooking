@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Use element prop to specify the component */}
-          <Route path='/home' element={<HomeScreen />} />
+          {/* <Route path='/home' element={<HomeScreen />} /> */}
 
           <Route path='/book/:roomid/:fromdate/:todate' element={<BookingScreen />} />
 
